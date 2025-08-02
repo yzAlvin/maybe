@@ -75,4 +75,8 @@ Rails.application.configure do
   config.autoload_paths += %w[test/support]
 
   config.action_mailer.default_url_options = { host: "example.com" }
+
+  # Default behaviour in Rails 8.1
+  # Remove when upgrade
+  config.active_support.to_time_preserves_timezone = :zone
 end

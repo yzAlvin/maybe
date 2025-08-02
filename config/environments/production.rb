@@ -109,4 +109,8 @@ Rails.application.configure do
 
   # set REDIS_URL for Sidekiq to use Redis
   config.active_job.queue_adapter = :sidekiq
+
+  # Default behaviour in Rails 8.1
+  # Remove when upgrade
+  config.active_support.to_time_preserves_timezone = :zone
 end

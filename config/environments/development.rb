@@ -85,4 +85,8 @@ Rails.application.configure do
 
   # Allow connection from any host in development
   config.hosts = nil
+
+  # Default behaviour in Rails 8.1
+  # Remove when upgrade
+  config.active_support.to_time_preserves_timezone = :zone
 end
